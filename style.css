@@ -1,0 +1,130 @@
+element.style{
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3(1,1,1); will-change: trasform;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+div{
+  display: block;
+}
+
+
+/*Cascating Stylesheet*/
+html,body{
+  --black: hsl(240, 6% ,13%);
+  --gray: hsl(240, 9%, 89%);
+
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgb(116, 40, 33);
+
+ 
+
+  
+}
+body{
+  display: grid;
+  place-items:center;    /*colocar os intems centralizado*/
+ 
+ 
+}
+
+main{
+  background: url(./img/backgroud.png) no-repeat
+  center/cover;
+  
+  width: 100vw;
+  min-width: 81px;
+  height: 100vh;
+  
+}
+
+.conteiner{
+  max-width: 250px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  color: var(--gray);
+  
+ /** background-color: rgb(255, 157, 0);
+  width: 890px;
+  height: 623px;*/
+
+}
+
+/*avatar de perfil*/
+.avatar{
+  width: 10rem;
+  margin: 11.5rem auto 0;  /*confiqura a img de perfil para ficar no meio*/
+  position:relative;
+
+}
+
+.avatar span{
+  position: absolute; /*coloca a img da rocktseat em cima da img do perfil*/
+  top: -15px; /*coloca a img da rocktseat um pouco mais para cima*/
+
+  z-index: 1; /*posicionamento no eixo z  e recoloca o logo da rocktseat em cima da img de perfil depois que  eu mexi com o object-fit*/
+
+}
+/* esse sinal > siquinifica que ele fai pesquisar a img que esta o primeiro nivel*/
+
+.avatar > img{
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;  /*faz a img se adaptar dentro desas largura e alturas que definir*/
+
+  clip-path:polygon(48% 0, 100% 23%, 100% 79%, 52% 100%, 2% 81%, 0 24%); ;  /*coloca minha img de perfil para parecer uma piramedir*/
+}
+h1{
+    font-size:2rem;
+    margin-top: 1.5rem;
+
+  }
+
+  a{
+    color:lavenderblush;
+    text-decoration:none;
+    
+    margin-top: 0.25rem;
+
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+
+    align-items: center;
+    font-size: 1.3rem;
+  }
+
+p{
+  margin-top: 2rem;
+ 
+}
+
+ul{
+  margin-top: 4rem;
+
+  list-style: none; /*tira as bolinhas da lista*/
+  padding: 0; /*alinhado no meio*/
+
+  display: flex; /*deixa o elemento um ao lado do outro*/
+
+  gap: 0.5rem; /*dar espaço um ao lado do outro  nos logos da rede social*/
+  justify-content: center;
+  
+  
+  
+}
+@media (min-width: 960px){
+    main {
+      background: url(./img/Mobile.png) no-repeat center/cover;
+      width: 375px;
+      height: 812px;
+    }
+  }
+  
+  
